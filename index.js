@@ -1,6 +1,10 @@
 const { Player } = require("discord-player");
 const Genius = require("genius-lyrics");
 const { Client, GatewayIntentBits } = require("discord.js");
+const express = require("express");
+
+const app = express();
+app.get("/", (req, res) => res.send("Hello World!"));
 
 global.client = new Client({
 	intents: [
