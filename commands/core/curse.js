@@ -1,9 +1,13 @@
 module.exports = {
 	name: "curse",
-	description: "curse it!",
+	description: "cure it!",
 	async execute({ client, inter }) {
-		const m = await inter.editReply("curse");
-		curses = ["siktir git", "amk", "orospu çocuğu", "oç", "piç", "sikik"];
-		inter.editReply(`${curses[Math.floor(Math.random() * curses.length)]}`);
+		curses = [
+			"elim çimdik sikim dimdik",
+			"arsızın götüne kazık çakmışlar, tıkırtı nerden geliyo demiş",
+			"fare sığamadığı deliğe, bir de kıçına kabak bağlayıp girmeyi denermiş",
+		];
+
+		inter.reply(curses[Math.floor(Math.random() * curses.length)]);
 	},
 };
