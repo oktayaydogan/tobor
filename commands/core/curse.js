@@ -1,6 +1,6 @@
 module.exports = {
 	name: "curse",
-	description: "cure it!",
+	description: "curse it!",
 	async execute({ client, inter }) {
 		curses = [
 			"elim çimdik sikim dimdik",
