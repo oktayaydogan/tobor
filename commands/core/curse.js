@@ -7,7 +7,8 @@ module.exports = {
 			"arsızın götüne kazık çakmışlar, tıkırtı nerden geliyo demiş",
 			"fare sığamadığı deliğe, bir de kıçına kabak bağlayıp girmeyi denermiş",
 		];
-
-		inter.reply(curses[Math.floor(Math.random() * curses.length)]);
+		const m = await inter.editReply(
+			curses[Math.floor(Math.random() * curses.length)]
+		);
 	},
 };
