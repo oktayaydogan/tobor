@@ -1,6 +1,6 @@
 module.exports = {
 	name: "curse",
-	description: "Siktir git amk",
+	description: "curse it!",
 	async execute({ client, inter }) {
 		const m = await inter.editReply("curse");
 		curses = ["siktir git", "amk", "orospu çocuğu", "oç", "piç", "sikik"];
