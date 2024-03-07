@@ -1,15 +1,37 @@
 module.exports = {
 	name: "curse",
 	description: "curse it!",
+	options: [
+		{
+			name: "member",
+			description: "the member you want to curse",
+			type: 6,
+			required: false,
+		},
+	],
 	async execute({ client, inter }) {
 		// get random member all members
 
 		const members = await inter.guild.members.fetch();
-		const member = members.random();
+		const member =
+			inter.options.getMember("member") !== null
+				? inter.options.getMember("member")
+				: members.random();
 
 		//if random user is bot, get another random user
 		if (member.user.bot) {
 			//return this.execute({ client, inter });
+		}
+
+		if (
+			inter.options.getMember("member") !== null &&
+			member.id == "386152161953841183"
+		) {
+			return inter.editReply("Onu yapamıyoruz yalnız :(");
+		}
+
+		if (member.id == "386152161953841183") {
+			return this.execute({ client, inter });
 		}
 
 		// send message and tag the user
