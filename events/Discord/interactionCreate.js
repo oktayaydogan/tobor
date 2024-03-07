@@ -74,6 +74,9 @@ module.exports = async (client, inter) => {
 					ephemeral: true,
 				});
 		}
+		console.log(
+			`-> [Command] ${command.name} | [User] ${inter.user.tag} | [Guild] ${inter.guild.name}`
+		);
 		command.execute({ inter, client });
 	}
 	if (inter.type === InteractionType.MessageComponent) {
